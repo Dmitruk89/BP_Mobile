@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "SFProText";
+    src: url("./Assets/Fonts/FontsFree-Net-SFProText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("./Assets/Fonts/FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+
+:root {
+    --language-correction: 0.7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #ffffff;
+    font-family: 'SFProText', sans-serif;
+}
+
+.banner {
+    position: relative;
+    max-width: 414px;
+    height: 100vh;
+    /* background-image: url('Assets/background-full/4.png'); */
+    background-size: cover;
+    overflow: hidden;
+}
+
+.banner_image {
+    position: absolute;
+    z-index: -5;
+}
+
+.banner_wrapper {
+    padding: 50px 20px 35px;
+}
+
+.banner_topNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_topNav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3rem;
+}
+
+.topNav_cross {
+    background-image: url('Assets/Path.png');
+    width: 16px;
+    height: 16px;
+}
+
+.banner_title h1{
+    text-align: center;
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: calc(3.6rem*var(--language-correction));
+    width: 85%;
+    margin: 150px auto 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.banner_benefits{
+    width: 65%;
+    margin: 35px auto;
+}
+
+.benefits_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.benefits_item p{
+    font-size: 1.7rem;
+}
+
+.benefits_icon{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.unlim {
+    width: 23px;
+    height: 12px;
+    background-image: url('Assets/unlimitedDocs.svg');
+    margin-right: 7px;
+}
+
+.export {
+    width: 16px;
+    height: 18px;
+    background-image: url('Assets/export.svg');
+    margin-right: 11px;
+}
+
+.recognition {
+    width: 21px;
+    height: 21px;
+    background-image: url('Assets/noAds.svg');
+    margin-right: 10px;
+}
+
+.banner_plans {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 45px;
+}
+
+.plans_item {
+    position: relative;
+    width: 131px;
+    height: 162px;
+    background-image: url(./Assets/shape-1.svg);
+    background-size: cover;
+    text-align: center;
+    opacity: .4;
+}
+
+.plan_withDiscount{
+    background-image: url(./Assets/shape-2.svg);
+    background-size: cover;
+}
+
+.plan__active{
+    width: 145px;
+    height: 178px;
+    opacity: 1;
+}
+
+.plan__active .plan_duration {
+    font-size: 1.87rem;
+    margin-top: 25px;
+}
+
+.plan__active .plan_price {
+    font-size: 2.4rem;
+    margin-top: 10px;
+}
+
+.plan__active .plan_perPeriod {
+    font-size: 1.54rem;
+}
+
+.plan__active .plan_adds {
+    font-size: 1.54rem;
+    text-transform: uppercase;
+    background-color: #495795;
+    margin: 13px -3px 11px;
+}
+
+.plan__active .plan_monthCost {
+    font-size: 1.3rem;
+}
+
+.plan_duration {
+    font-size: 1.7rem;
+    margin-top: 23px;
+}
+
+.plan_price {
+    font-size: 2.2rem;
+    margin-top: 16px;
+}
+
+.plan_perPeriod {
+    font-size: 1.4rem;
+}
+
+.plan_adds {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: #495795;
+    margin: 7px -3px 11px;
+}
+
+.plan_monthCost {
+    font-size: 1.2rem;
+}
+
+
+.continueButton {
+    display: block;
+    width: 280px;
+    padding: 20px 0;
+    margin: 16px auto;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.7rem;
+    background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+}
+
+.hiddenWorning {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.footer_nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer_nav a{
+    color: #BDC0D0;
+    font-size: 1.1rem;
+}
+
+.plan_shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(73, 87, 149, 0.1), rgba(73, 87, 149, 0.1));
+    background-image: url(./Assets/shape-transparency.svg);
+    background-size: cover;
+}
+
+.plan_discount{
+    position: absolute;
+    right: 0;
+    padding-top: 9px;
+    font-size: 1rem;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #DB0000;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (height: 844px) {
+    .banner_wrapper {
+        padding: 50px 20px 25px;
+    }
+
+    .banner_image {
+        width: 100%;
+    }
+
+    .banner_title h1{
+        margin: 190px auto 0;
+    }
+}
+
+@media screen and (height: 736px) {
+    .banner_wrapper {
+        padding: 40px 20px 15px;
+    }
+
+    .banner_image {
+        width: 100%;
+    }
+
+    .banner_title h1{
+        margin: 100px auto 0;
+    }
+}
+
+@media screen and (height: 667px) {
+    .banner_wrapper {
+        padding: 25px 20px 15px;
+    }
+
+    .banner_title h1{
+        margin: 50px auto 0;
+    }
+}
+
