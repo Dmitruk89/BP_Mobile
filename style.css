@@ -31,7 +31,6 @@ body {
     position: relative;
     max-width: 414px;
     height: 100vh;
-    /* background-image: url('Assets/background-full/4.png'); */
     background-size: cover;
     overflow: hidden;
 }
@@ -66,7 +65,7 @@ body {
     text-align: center;
     font-family: 'SFProDisplay', sans-serif;
     font-size: calc(3.6rem * var(--language-correction));
-    width: 85%;
+    width: 90%;
     margin: 150px auto 0;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
 }
