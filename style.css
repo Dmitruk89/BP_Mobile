@@ -65,7 +65,7 @@ body {
 .banner_title h1{
     text-align: center;
     font-family: 'SFProDisplay', sans-serif;
-    font-size: calc(3.6rem*var(--language-correction));
+    font-size: calc(3.6rem * var(--language-correction));
     width: 85%;
     margin: 150px auto 0;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
@@ -83,7 +83,7 @@ body {
 }
 
 .benefits_item p{
-    font-size: 1.7rem;
+    font-size: calc(1.7rem * var(--language-correction));
 }
 
 .benefits_icon{

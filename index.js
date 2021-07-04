@@ -16,21 +16,17 @@ const warningText = document.getElementById('warning_text');
 const termsText = document.getElementById('terms_text');
 const privacyText = document.getElementById('privacy_text');
 
-
-
 const plans = document.querySelectorAll('.plans_item');
 const submitPlan = document.getElementById('submitPlan');
 
-// let currentLocale = window.navigator ? (window.navigator.language ||
-//     window.navigator.systemLanguage ||
-//     window.navigator.userLanguage) : "en";
-// currentLocale = currentLocale.substr(0, 2).toLowerCase();
-
-let currentLocale = 'en';
+let currentLocale = window.navigator ? (window.navigator.language ||
+    window.navigator.systemLanguage ||
+    window.navigator.userLanguage) : "en";
+currentLocale = currentLocale.substr(0, 2).toLowerCase();
 
 switch (currentLocale){
     case 'ru':
-        document.documentElement.style.setProperty('--language-correction', '0.7');
+        document.documentElement.style.setProperty('--language-correction', '0.75');
         break;
     case 'es':
         document.documentElement.style.setProperty('--language-correction', '0.9');
@@ -39,7 +35,7 @@ switch (currentLocale){
         document.documentElement.style.setProperty('--language-correction', '1');
         break;
     case 'fr':
-        document.documentElement.style.setProperty('--language-correction', '0.7');
+        document.documentElement.style.setProperty('--language-correction', '0.75');
         break;
     case 'ja':
         document.documentElement.style.setProperty('--language-correction', '0.8');
@@ -58,7 +54,6 @@ switch (currentLocale){
 async function getCurrentTranslation(locale){
     let response = await fetch(`./Localizations/${locale}.json`);
     let data = await response.json();
-    console.log(data);
     return data;
 }
 
@@ -70,13 +65,13 @@ async function translateText(){
     exportText.innerHTML = translation["Count mode"]
     recognitionText.innerHTML = translation["Text recognition (OCR)"]
     monthlyNameText.innerHTML = translation["Monthly"]
-   
+    monthlyPerMonthText.innerHTML = translation["<strong>{{price}}</strong><br>per month"].slice(30);
     monthlyDaysFreeText.innerHTML = translation["3 DAYS FREE"]
-    
+    monthlyMonthCostText.innerHTML = translation["{{price}}/month"].slice(9);
     annuallyNameText.innerHTML = translation["Annually"]
-   
+    annuallyPerYearText.innerHTML = translation["<strong>{{price}}</strong><br>per year"].slice(30);
     annuallyMostPopularText.innerHTML = translation["MOST POPULAR"]
-    
+    annuallyMonthCostText.innerHTML = translation["{{price}}/month"].slice(9);
     continueText.innerHTML = translation["Continue"]
     warningText.innerHTML = translation["Auto-renewable. Cancel anytime."]
     termsText.innerHTML = translation["Terms of Use"]
